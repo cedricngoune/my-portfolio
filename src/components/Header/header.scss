@@ -1,0 +1,31 @@
+.container {
+    margin: 5vh;
+    .container-header {
+        display: grid;
+        grid-template-columns: 50% 30%;
+        text-align: center;
+        .container-title {
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .title {
+            font-size: 2.5em;
+            font-family: 'Montserrat';
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            padding: 5vh 0;
+        }
+        .subtitle {
+            font-family: "Poppins";
+            font-weight: 400;
+            color: black;
+            text-align: center;
+            word-spacing: 5px;
+            font-size: 1.4em;
+        }
+        .avatar {
+            height: 340px;
+            border-radius: 50%;
+        }
+    }
+}

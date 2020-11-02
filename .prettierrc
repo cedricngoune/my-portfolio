@@ -1,8 +1,9 @@
 {
     "printWidth": 80,
+    "semi": false,
     "tabWidth": 4,
     "singleQuote": false,
-    "jsxBracketSameLine": false,
+    "jsxBracketSameLine": true,
     "trailingComma": "es5",
     "parser": "babel"
 }
