@@ -1,0 +1,32 @@
+.section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    .container-hero {
+        padding: 20px 250px;
+        .title-hero {
+            font-family: 'Raleway';
+            font-weight: 800;
+            font-size: 3.4rem;
+            position: relative;
+            &::before {
+                content: ' ';
+                display: inline;
+                position: absolute;
+                bottom: 0;
+                background-color: #000;
+                width: 120px;
+                height: 4px;
+                border: 1px solid;
+                margin-bottom: -12px;
+            }
+            &:hover::after {
+                color: #3564aa;
+            }
+        }
+    }
+    .skills-hero {
+        font-family: 'Montserrat';
+        padding: 3vw 250px;
+    }
+}
