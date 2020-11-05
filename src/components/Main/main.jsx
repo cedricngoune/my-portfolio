@@ -1,7 +1,6 @@
 import React from "react"
 import { Stacks } from "./stacks"
 import { Projects } from "./projects"
-import wallpaper from "../../assets/images/wallpaper.jpg"
 import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
 import "./main.scss"
