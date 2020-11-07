@@ -1,41 +1,36 @@
 export const Stacks = [{
-        name: "Javascript",
-        class: "skill",
+        title: "Base de données",
+        langages: ["MySQL", "PostGre", "MongoDB"],
+        class: "text-skill",
     },
     {
-        name: "Html5",
-        class: "skill",
+        title: "Front-end",
+        langages: ["Javascript", "Html", "Css", "Sass"],
+        class: "text-skill",
     },
     {
-        name: "Css3",
-        class: "skill",
+        title: "Back-end",
+        langages: ["Python", "NodeJs", "Serverless"],
+        class: "text-skill",
     },
     {
-        name: "NodeJs",
-        class: "skill",
+        title: "Framework",
+        langages: ["React", "GatsbyJs", "Express"],
+        class: "text-skill",
     },
     {
-        name: "React",
-        class: "skill",
+        title: "Testing",
+        langages: ["Jest", "Mocha"],
+        class: "text-skill",
     },
     {
-        name: "VueJs",
-        class: "skill",
+        title: "DevOPS",
+        langages: ["Docker", "CI/CD"],
+        class: "text-skill",
     },
     {
-        name: "Webpack",
-        class: "skill",
-    },
-    {
-        name: "MySQL",
-        class: "skill",
-    },
-    {
-        name: "PostgreSQL",
-        class: "skill",
-    },
-    {
-        name: "MongoDB",
-        class: "skill",
+        title: "Solutions cloud",
+        langages: ["Netlify", "Aws amplify", "Heroku"],
+        class: "text-skill",
     },
 ]

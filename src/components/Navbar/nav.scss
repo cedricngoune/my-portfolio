@@ -1,5 +1,5 @@
 .container-nav {
-    padding: 3.5em 0;
+    padding: 2.5vw 0;
     .container-fluid {
         display: grid;
         flex-flow: row wrap;
@@ -7,6 +7,12 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        .navbar-brand .logo {
+            text-decoration: none;
+            font-size: 1.5em;
+            font-family: 'Press Start 2P';
+            color: black;
+        }
         .navbar-menu {
             display: flex;
             justify-content: flex-end;

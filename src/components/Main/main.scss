@@ -1,13 +1,17 @@
 $primaryColor: #3564aa;
 $fontFamily: 'Raleway';
+$fontFamilySecond: 'Raleway Dots';
 .section {
     position: relative;
     width: 100%;
-    height: 50vh;
-    padding: 0 250px;
+    .wrapper {
+        padding: 0 250px;
+        background-color: #f8f9fa;
+    }
     .container-hero {
+        padding: 2.5vw 0;
         .title-hero {
-            font-family: $fontFamily;
+            font-family: $fontFamilySecond;
             font-weight: 800;
             font-size: 3.4rem;
             position: relative;
@@ -18,8 +22,8 @@ $fontFamily: 'Raleway';
                 bottom: 0;
                 background-color: #000;
                 width: 120px;
-                height: 4px;
-                border: 1px solid;
+                height: 1px;
+                border: 1px solid black;
                 margin-bottom: -12px;
             }
             &:hover::after {
@@ -32,51 +36,57 @@ $fontFamily: 'Raleway';
     }
     .content {
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         flex-wrap: wrap;
-        .gridList {
-            width: 200px;
-            margin: 3vw 0;
-        }
-        .grid-item {
-            text-align: center;
-            font-family: 'Montserrat';
-            cursor: pointer;
-            .skill {
-                padding: 20px;
-                transform: scale(1);
-                transition: transform 10ms linear;
-                &:hover {
-                    transform: scale(1.1);
+        .content-skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 290px;
+            height: 159px;
+            transition: all 50ms ease-in-out;
+            background-color: #fff;
+            margin-top: 2vw;
+            margin-right: 3vw;
+            &:hover {
+                box-shadow: 0 0 10px #ccc9c9;
+            }
+            .text-skill {
+                color: #3564aa;
+                font-family: $fontFamilySecond;
+                text-align: center;
+                font-size: 1.3em;
+            }
+            .box-languages {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+                p {
+                    margin-top: 15px;
+                    padding-left: 10px;
+                    font-size: 17px;
+                    font-weight: 900;
+                    font-family: $fontFamilySecond;
                 }
             }
         }
     }
     h2 {
-        font-family: 'Avenir';
+        font-family: $fontFamilySecond;
         font-size: 1.5em;
-        b {
-            background-color: $primaryColor;
-            padding: 10px;
-            border-radius: 50%;
-        }
-    }
-    .wallpaper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .wrapper-projects {
-        height: 30vw;
+        margin-top: 10vh;
         .container-project {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-wrap: wrap;
-            .card-title {
-                text-align: center;
-                font-family: 'Raleway';
-                text-transform: uppercase;
-            }
+        }
+        .img-project {
+            width: 526px;
+            height: 308px;
         }
     }
 }

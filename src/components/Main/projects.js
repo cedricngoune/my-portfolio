@@ -1,10 +1,12 @@
 import uuid from "react-uuid"
-
+import imgProject_one from "../../assets/images/screenOne.png"
+import imgProject_two from "../../assets/images/screenTwo.png"
+import imgProject_three from "../../assets/images/imgProject_three.png"
 export const Projects = [{
         id: uuid(),
         title: "WeDev App",
         description: "Accompagnez les freelances et particuliers sur leur projet de A à Z",
-        screen: "",
+        screen: imgProject_one,
         link: "https://app-wedev.herokuapp.com/",
         stacks: ["React", "Node", "MySQL", "Rest"],
         githubLink: "",
@@ -13,25 +15,27 @@ export const Projects = [{
         id: uuid(),
         title: "e-Shop",
         description: "Vous voulez les meubles dans votre appartement? Visitez ce site 👉🏾",
-        screen: "",
+        screen: imgProject_two,
         link: "https://eshop-mobelia.netlify.app/",
         stacks: ["React/Gastby", "Headless CMS", "GraphQL", "Sass"],
-        githubLink: "",
+        githubLink: "https://github.com/cedricdollars/eshop",
     },
     {
         id: uuid(),
         title: "Password generator",
         description: "Algorithme de génération de mot de passe",
         screen: "",
+        link: "https://password-app-generator.herokuapp.com/",
         stacks: ["Javascript Vanilla", "Css3", "Html"],
-        githubLink: "",
+        githubLink: "https://github.com/cedricdollars/password-generator",
     },
     {
         id: uuid(),
-        title: "Movie App",
-        description: "J'utilise l'API des films pour récupérer les films",
-        screen: "",
-        stacks: ["React", "Redux", "Css"],
-        githubLink: "",
+        title: "Delivery Eat",
+        description: "Petite application de repas et de commandes",
+        screen: imgProject_three,
+        link: "",
+        stacks: ["VueJs", "Css"],
+        githubLink: "https://github.com/cedricdollars/vueJs-mini-app",
     },
 ]

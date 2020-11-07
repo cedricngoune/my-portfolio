@@ -1,6 +1,6 @@
 .container {
     margin: 0;
-    height: 50vw;
+    height: 40vw;
     position: relative;
     .container-header {
         display: grid;
@@ -8,41 +8,51 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-top: 100px;
         .container-title {
             display: flex;
             flex-flow: column wrap;
         }
-        strong {
-            transition: all 100ms ease-in-out;
-            &:hover {
-                text-decoration: underline wavy;
-            }
-        }
         .title {
-            font-size: 5em;
+            font-size: 5.5em;
             font-family: 'Raleway';
             text-transform: capitalize;
             font-weight: 900;
-            padding: 4vw 0;
+            padding: 2vw 0;
         }
         .description {
-            font-family: "Montserrat";
+            font-family: "Avenir";
             font-weight: 400;
             color: black;
             text-align: left;
-            line-height: 2;
-            font-size: 1.4em;
+            line-height: 1.7;
+            font-size: 1.3em;
             span {
                 font-weight: 700;
-                font-size: 1.5em;
+                transition: all 100ms ease-in-out;
+                font-style: italic;
+                position: relative;
+                font-size: 1.2em;
+                &:after {
+                    transition: all 100ms ease-in-out;
+                }
+                &:hover {
+                    &:after {
+                        content: url('../../assets/images/code.gif');
+                        position: absolute;
+                        display: block;
+                        left: 0;
+                        margin-top: -10px;
+                    }
+                }
             }
         }
         figure {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             .avatar {
-                height: 300px;
+                height: 350px;
                 border-radius: 50%;
             }
         }
