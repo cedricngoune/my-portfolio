@@ -27,6 +27,7 @@ const Header = () => {
                                 <br />
                                 Ce <span>portfolio </span> est l'occasion pour
                                 moi de présenter mes connaissances et mes
+
                                 réalisations.
                             </h3>
                         </div>

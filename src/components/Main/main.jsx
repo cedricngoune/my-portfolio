@@ -2,6 +2,7 @@ import React from "react"
 import { Stacks } from "./stacks"
 import { Projects } from "./projects"
 import wallpaper from "../../assets/images/wallpaper.jpg"
+
 import "./main.scss"
 
 const Main = ({ offsetY }) => {
@@ -15,6 +16,7 @@ const Main = ({ offsetY }) => {
                                 Projets & Compétences
                             </h1>
                         </div>
+
                     </div>
                 </div>
 
@@ -42,6 +44,7 @@ const Main = ({ offsetY }) => {
                                 )
                             })}
                         </div>
+
                     </div>
                 </div>
                 <div className="wrapper-projects">
