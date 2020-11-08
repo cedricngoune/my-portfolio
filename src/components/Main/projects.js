@@ -16,7 +16,7 @@ export const Projects = [{
     },
     {
         id: uuid(),
-        title: "e-Shop",
+        title: "E-Shop",
         description: "Vous voulez les meubles dans votre appartement? Visitez ce site 👉🏾",
 
         screen: imgProject_two,

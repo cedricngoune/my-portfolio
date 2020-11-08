@@ -33,18 +33,6 @@
                 font-style: italic;
                 position: relative;
                 font-size: 1.2em;
-                &:after {
-                    transition: all 100ms ease-in-out;
-                }
-                &:hover {
-                    &:after {
-                        content: url('../../assets/images/code.gif');
-                        position: absolute;
-                        display: block;
-                        left: 0;
-                        margin-top: -10px;
-                    }
-                }
             }
         }
         figure {

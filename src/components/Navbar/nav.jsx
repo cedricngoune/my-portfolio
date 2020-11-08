@@ -1,6 +1,7 @@
 import React from "react"
 import { MenuItem } from "./menuItem"
 import "./nav.scss"
+import logo from "../../assets/icons/logo.png"
 
 function Nav() {
     return (
@@ -8,9 +9,12 @@ function Nav() {
             <div className="container-nav">
                 <div className="container-fluid">
                     <div className="navbar-brand">
-                        <a href="/" className="logo">
-                            <strong>CN</strong>
-                        </a>
+                        <div className="navbar-logo">
+                            <a href="/" className="logo">
+                                <img src={logo} alt="logo" className="logo" />
+                                <span>CN</span>
+                            </a>
+                        </div>
                     </div>
                     <div className="navbar-menu">
                         <ul>

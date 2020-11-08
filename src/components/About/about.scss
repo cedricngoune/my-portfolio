@@ -1,0 +1,28 @@
+.section {
+    width: 100%;
+    position: relative;
+    .wrapper-section {
+        padding: 2vw 250px;
+        h1 {
+            font-size: 3.4rem;
+            font-family: 'Raleway Dots';
+        }
+        .section-content {
+            display: flex;
+            padding-top: 3vw;
+            .description {
+                margin-right: 0;
+                width: 526px;
+                font-family: 'Raleway Dots';
+                font-weight: 600;
+                text-align: start;
+                line-height: 2;
+            }
+            .image {
+                width: 526px;
+                height: auto;
+            }
+        }
+        .section-hobbies {}
+    }
+}
