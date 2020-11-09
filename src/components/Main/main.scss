@@ -4,18 +4,6 @@ $fontFamilySecond: 'Raleway Dots';
 .section {
     position: relative;
     width: 100%;
-    &:before,
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100px;
-        position: absolute;
-        bottom: -90px;
-        right: 0;
-        left: 0;
-        background-color: #fff;
-        transform: skewY(-3deg);
-    }
     .wrapper {
         padding: 0 250px;
         background-color: #f8f8ff;
@@ -95,45 +83,68 @@ $fontFamilySecond: 'Raleway Dots';
             flex-wrap: wrap;
             padding: 3vw 0;
             .card-project-content {
-                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 380px;
                 margin-right: 3vw;
                 margin-top: 2vw;
-                .title-project {
-                    position: absolute;
-                    top: 10%;
-                    left: 50%;
-                    color: #fff;
-                    z-index: 99;
-                    transform: translateX(-50%);
-                    font-size: 1.7em;
-                    font-weight: 700;
-                    font-family: 'Avenir';
+                transition: all 70ms ease-in-out;
+                background-color: #fff;
+                .card-header {
+                    .img-project {
+                        width: 380px;
+                        height: 222px;
+                        filter: brightness(60%);
+                        &:hover {
+                            cursor: pointer;
+                            filter: brightness(50%);
+                        }
+                    }
                 }
-                .button {
-                    padding: 10px 15px;
-                    background: #000;
-                    color: #fff;
-                    outline: none;
-                    border: none;
-                    font-family: 'Avenir';
-                    font-size: 1rem;
-                    font-weight: 700;
-                    position: absolute;
-                    bottom: 50%;
-                    left: 50%;
-                    transform: translate(-50%, 50%);
-                    transition: opacity 100ms ease;
-                    &:hover {
-                        opacity: .8;
-                        cursor: pointer;
+                .card-body {
+                    padding: 20px;
+                    background-color: #fff;
+                    width: 100%;
+                    .title-project {
+                        font-size: 1.7em;
+                        font-weight: 700;
+                        font-family: 'Raleway Dots';
+                        padding-bottom: 15px;
+                    }
+                    h4 {
+                        padding-bottom: 40px;
+                        font-family: 'Raleway Dots';
+                        font-weight: 700;
+                        line-height: 1.8;
+                    }
+                    p {
+                        padding-bottom: 20px;
+                        strong {
+                            word-spacing: 5px;
+                        }
+                    }
+                    .button {
+                        color: $primaryColor;
+                        border: none;
+                        outline: none;
+                        font-family: 'Montserrat';
+                        padding-top: 20px;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        font-weight: 700;
+                        transition: transform 50ms linear;
+                        &:hover {
+                            cursor: pointer;
+                            transform: translateX(20px);
+                        }
+                        i {
+                            padding-right: 4px;
+                        }
                     }
                 }
             }
-        }
-        .img-project {
-            width: 526px;
-            height: 300px;
-            filter: brightness(60%);
         }
     }
 }

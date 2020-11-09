@@ -18,7 +18,7 @@ function App() {
         <div className="container-app">
             <Header />
 
-            <Main offsetY={offsetY}/>
+            <Main offsetY={offsetY} />
             <About />
         </div>
     )

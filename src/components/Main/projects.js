@@ -7,21 +7,18 @@ export const Projects = [{
         id: uuid(),
         title: "WeDev App",
         description: "Accompagnez les freelances et particuliers sur leur projet de A à Z",
-
         screen: imgProject_one,
-
         link: "https://app-wedev.herokuapp.com/",
-        stacks: ["React", "Node", "MySQL", "Rest"],
+        stacks: ["React", "NodeJs", "MySQL", "Rest"],
         githubLink: "",
     },
     {
         id: uuid(),
         title: "E-Shop",
-        description: "Vous voulez les meubles dans votre appartement? Visitez ce site 👉🏾",
-
+        description: "Vous voulez les meubles dans votre appartement? Visitez ce site ",
         screen: imgProject_two,
         link: "https://eshop-mobelia.netlify.app/",
-        stacks: ["React/Gastby", "Headless CMS", "GraphQL", "Sass"],
+        stacks: ["React/Gastby", "GraphQL", "Netlify"],
         githubLink: "https://github.com/cedricdollars/eshop",
     },
     {
@@ -29,7 +26,6 @@ export const Projects = [{
         title: "Password generator",
         description: "Algorithme de génération de mot de passe",
         screen: "",
-
         link: "https://password-app-generator.herokuapp.com/",
         stacks: ["Javascript Vanilla", "Css3", "Html"],
         githubLink: "https://github.com/cedricdollars/password-generator",

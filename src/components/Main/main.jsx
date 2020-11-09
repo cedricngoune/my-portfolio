@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import { Stacks } from "./stacks"
 import { Projects } from "./projects"
 import wallpaper from "../../assets/images/wallpaper.jpg"
@@ -6,14 +6,6 @@ import wallpaper from "../../assets/images/wallpaper.jpg"
 import "./main.scss"
 
 const Main = ({ offsetY }) => {
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        console.log(showModal);
-        setShowModal(!showModal);
-    }
-    
-
     return (
         <section className="section">
             <div className="wrapper">
@@ -61,23 +53,47 @@ const Main = ({ offsetY }) => {
                             return (
                                 <div key={project.id} className="card-project">
                                     <div className="card-project-content">
-                                        <h3 className="title-project">
-                                            {project.title}
-                                        </h3>
-                                        <figure>
-                                            <img
-                                                className="img-project"
-                                                alt={project.title}
-                                                src={
-                                                    project.screen
-                                                        ? project.screen
-                                                        : wallpaper
+                                        <div className="card-header">
+                                            <figure>
+                                                <img
+                                                    className="img-project"
+                                                    alt={project.title}
+                                                    src={
+                                                        project.screen
+                                                            ? project.screen
+                                                            : wallpaper
+                                                    }
+                                                />
+                                            </figure>
+                                        </div>
+
+                                        <div className="card-body">
+                                            <h3 className="title-project">
+                                                {project.title}
+                                            </h3>
+                                            <h4>{project.description} </h4>
+                                            <p>
+                                                Stacks:
+                                                {project.stacks.map(
+                                                    (stack, id) => {
+                                                        return (
+                                                            <strong key={id}>
+                                                                {stack}
+                                                            </strong>
+                                                        )
+                                                    }
+                                                )}
+                                            </p>
+                                            <button
+                                                className="button"
+                                                onClick={() =>
+                                                    window.open(project.link)
                                                 }
-                                            />
-                                        </figure>
-                                        <button className="button" onClick={openModal}>
-                                            Voir le projet
-                                        </button>
+                                            >
+                                                <i className="fa fa-chevron-right"></i>
+                                                Voir le projet
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             )

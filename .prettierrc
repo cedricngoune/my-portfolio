@@ -3,7 +3,7 @@
     "semi": false,
     "tabWidth": 4,
     "singleQuote": false,
-    "jsxBracketSameLine": true,
+    "jsxBracketSameLine": false,
     "trailingComma": "es5",
     "parser": "babel"
 }
