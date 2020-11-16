@@ -3,6 +3,7 @@ import "./App.css"
 import Header from "./components/Header/header"
 import Main from "./components/Main/main"
 import About from "./components/About/about"
+import Contact from "./components/Contact/contact"
 
 function App() {
     const [offsetY, setOffsetY] = useState(0)
@@ -20,6 +21,7 @@ function App() {
 
             <Main offsetY={offsetY} />
             <About />
+            <Contact />
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import "./about.scss"
-import picture from "../../assets/images/picture.jpg"
+
+// import Timeline from './Timeline/timeline'
 
 const About = () => {
     return (
@@ -21,18 +22,12 @@ const About = () => {
                                 entoure.
                             </p>
                         </div>
-                        <figure>
-                            <img src={picture} alt="Moi" className="image" />
-                        </figure>
+                       
                     </div>
-                    <div className="section-hobbies">
-                        <h2>J'ai aussi des passions  </h2>
-                        <ul>
-                            <li>Basket</li>
-                            <li>Développement personnel</li>
-                            <li>Cuisine</li>
-                        </ul>
-                    </div>
+                    <section className="section-resume">
+                        <h2>Mon parcours </h2>
+                        {/* <Timeline /> */}
+                   </section>
                 </div>
             </div>
         </>

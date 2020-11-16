@@ -10,7 +10,7 @@ export const Stacks = [{
     },
     {
         title: "Back-end",
-        langages: ["Python", "NodeJs", "Serverless"],
+        langages: ["Python", "NodeJs", "PhP"],
         class: "text-skill",
     },
     {

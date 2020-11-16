@@ -56,7 +56,6 @@ const Main = ({ offsetY }) => {
                                         <div className="card-header">
                                             <figure>
                                                 <img
-                                                    className="img-project"
                                                     alt={project.title}
                                                     src={
                                                         project.screen
@@ -73,7 +72,6 @@ const Main = ({ offsetY }) => {
                                             </h3>
                                             <h4>{project.description} </h4>
                                             <p>
-                                                Stacks:
                                                 {project.stacks.map(
                                                     (stack, id) => {
                                                         return (
@@ -84,15 +82,28 @@ const Main = ({ offsetY }) => {
                                                     }
                                                 )}
                                             </p>
-                                            <button
-                                                className="button"
+                                            <span
                                                 onClick={() =>
-                                                    window.open(project.link)
+                                                    window.open(
+                                                        project.githubLink
+                                                    )
                                                 }
                                             >
+                                                Code source
+                                            </span>
+                                            {project.link !== ""  ?
+                                                <button
+                                                    className="button"
+                                                    onClick={() =>
+                                                    window.open(project.link)
+                                                }
+                                                >
                                                 <i className="fa fa-chevron-right"></i>
                                                 Voir le projet
                                             </button>
+                                            : <div>Projet en construction</div>
+                                        }
+                                            
                                         </div>
                                     </div>
                                 </div>

@@ -79,34 +79,31 @@ $fontFamilySecond: 'Raleway Dots';
     .wrapper-projects {
         padding: 1vw 0;
         .container-project {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 3vw 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             .card-project-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 380px;
+                height: 540px;
+                margin-top: 3vw;
                 margin-right: 3vw;
-                margin-top: 2vw;
                 transition: all 70ms ease-in-out;
                 background-color: #fff;
-                .card-header {
-                    .img-project {
-                        width: 380px;
-                        height: 222px;
-                        filter: brightness(60%);
-                        &:hover {
-                            cursor: pointer;
-                            filter: brightness(50%);
-                        }
+                .card-header img {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 222px;
+                    filter: brightness(60%);
+                    &:hover {
+                        cursor: pointer;
+                        filter: brightness(50%);
                     }
                 }
                 .card-body {
                     padding: 20px;
                     background-color: #fff;
-                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
                     .title-project {
                         font-size: 1.7em;
                         font-weight: 700;
@@ -115,34 +112,54 @@ $fontFamilySecond: 'Raleway Dots';
                     }
                     h4 {
                         padding-bottom: 40px;
+                        flex-grow: 2;
+                        height: 130px;
                         font-family: 'Raleway Dots';
                         font-weight: 700;
                         line-height: 1.8;
                     }
                     p {
-                        padding-bottom: 20px;
+                        flex-basis: 3vw;
+                        height: 30px;
                         strong {
-                            word-spacing: 5px;
+                            padding: 5px 8px;
+                            margin-left: 3px;
+                            background-color: #bbd3e4;
+                            color: inherit;
+                            font-family: 'Raleway';
+                            border-radius: 15px;
                         }
                     }
+                    span {
+                        color: violet;
+                        cursor: pointer;
+                        line-height: 2;
+                        display: block;
+                    }
                     .button {
-                        color: $primaryColor;
+                        font-family: 'Raleway Dots';
+                        font-weight: 700;
+                        font-size: 1rem;
+                        color: black;
+                        flex-grow: 3px;
                         border: none;
                         outline: none;
-                        font-family: 'Montserrat';
-                        padding-top: 20px;
-                        font-size: 1rem;
                         background-color: transparent;
-                        font-weight: 700;
                         transition: transform 50ms linear;
                         &:hover {
                             cursor: pointer;
-                            transform: translateX(20px);
+                            i {
+                                padding-right: 7px;
+                            }
                         }
                         i {
                             padding-right: 4px;
                         }
                     }
+                }
+                &:hover {
+                    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+                    ;
                 }
             }
         }
