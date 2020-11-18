@@ -6,7 +6,7 @@ const FormContact = () => {
     return (
         <div className="section-contact">
             <div className="wrapper-contact">
-                <h1 className="section-title">Et si nous prenons contact</h1>
+                <h1 className="section-title">Et si nous prenions contact</h1>
                 <div className="box-form-contact">
                     <div className="form-contact">
                         <div className="row">
@@ -32,16 +32,13 @@ const FormContact = () => {
                             className="input-textarea"
                             placeholder="Votre message :)"
                         />
-                       
-                            <button
-                                className="btn-send"
-                                onClick={() => sendMail}
-                            >
-                                Envoyer
-                            </button>
-                       
+
+                        <button className="btn-send" onClick={() => sendMail}>
+                            Envoyer
+                        </button>
                     </div>
                 </div>
+            
             </div>
         </div>
     )

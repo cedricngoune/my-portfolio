@@ -90,6 +90,7 @@ const Main = ({ offsetY }) => {
                                                 }
                                             >
                                                 Code source
+                                                 <i className="fas fa-link" style={{marginLeft: '3px'}}/>
                                             </span>
                                             {project.link !== ""  ?
                                                 <button

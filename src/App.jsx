@@ -4,6 +4,7 @@ import Header from "./components/Header/header"
 import Main from "./components/Main/main"
 import About from "./components/About/about"
 import Contact from "./components/Contact/contact"
+import Footer from './components/Footer/footer'
 
 function App() {
     const [offsetY, setOffsetY] = useState(0)
@@ -22,6 +23,7 @@ function App() {
             <Main offsetY={offsetY} />
             <About />
             <Contact />
+            <Footer />
         </div>
     )
 }

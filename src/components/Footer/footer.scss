@@ -1,0 +1,23 @@
+.box_social_media {
+    background-color: #3564aa;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    .social__links {
+        a {
+            padding-left: 5px;
+            color: #fff;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+    strong {
+        color: #fff;
+        font-family: 'Raleway Dots';
+        padding-top: 10px;
+    }
+}

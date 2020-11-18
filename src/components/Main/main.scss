@@ -124,8 +124,8 @@ $fontFamilySecond: 'Raleway Dots';
                         strong {
                             padding: 5px 8px;
                             margin-left: 3px;
-                            background-color: #bbd3e4;
-                            color: inherit;
+                            background-color: $primaryColor;
+                            color: #fff;
                             font-family: 'Raleway';
                             border-radius: 15px;
                         }
