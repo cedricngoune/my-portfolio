@@ -4,27 +4,39 @@ import Header from "./components/Header/header"
 import Main from "./components/Main/main"
 import About from "./components/About/about"
 import Contact from "./components/Contact/contact"
-import Footer from './components/Footer/footer'
+import Footer from "./components/Footer/footer"
+import { Provider } from "react-redux"
+import { themes } from './components/theme/theme'
+import { ThemeProvider } from "styled-components"
+import GlobalStyle from './components/theme/globalStyle'
+import   { store }  from "./components/theme/redux/stores"
 
 function App() {
-    const [offsetY, setOffsetY] = useState(0)
-    const handleScroll = () => setOffsetY(window.pageYOffset)
-
+    
+    const [currentTheme, setCurrentTheme] = useState({
+        name: "light",
+        style: themes.light,
+    })
+   
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
-    }, [])
-    return (
-        <div className="container-app">
-            <Header />
+        store.subscribe(() => {
+            setCurrentTheme(store.getState().currentTheme)
+        })
+    }, [currentTheme])
 
-            <Main offsetY={offsetY} />
-            <About />
-            <Contact />
-            <Footer />
-        </div>
+    return (
+        <Provider store={store}>
+            <ThemeProvider theme={currentTheme.style}>
+                <GlobalStyle theme={currentTheme.style} />
+                <div className="container-app">
+                    <Header />
+                    <Main />
+                    <About />
+                    <Contact />
+                    <Footer />
+                </div>
+            </ThemeProvider>
+        </Provider>
     )
 }
 

@@ -1,11 +1,10 @@
 import React from "react"
 import { Stacks } from "./stacks"
 import { Projects } from "./projects"
-import wallpaper from "../../assets/images/wallpaper.jpg"
 
 import "./main.scss"
 
-const Main = ({ offsetY }) => {
+const Main = () => {
     return (
         <section className="section">
             <div className="wrapper">
@@ -20,34 +19,48 @@ const Main = ({ offsetY }) => {
                 </div>
 
                 <div className="skills-hero">
-                    <h2>Mes compétences à disposition </h2>
-                    <span>
-                        <i className="far fa-brackets-curly"></i>
-                    </span>
-                    <div className="wrapper-skills">
-                        <div className="content">
+                    <h2>Mes compétences à votre disposition </h2>
+                    <section className="wrapper-skills">
+                        <ul className="caroussel">
                             {Stacks.map((stack, index) => {
                                 return (
-                                    <div key={index} className="content-skills">
-                                        <div className={stack.class}>
-                                            <h3>{stack.title} </h3>
+                                    <li key={index} className="card box">
+                                        <div className="box-header">
+                                            <div className={stack.class}>
+                                                <span>
+                                                    <img
+                                                        src={stack.icon}
+                                                        alt="icon-dev"
+                                                    />
+                                                </span>
+                                                <h3>{stack.title} </h3>
+                                            </div>
                                         </div>
-                                        <div className="box-languages">
+                                        <div className="box-content">
+                                            <p className="text_description">
+                                                {stack.description}
+                                            </p>
+                                            <h5>Stacks utilisés:</h5>
                                             {stack.langages.map(
                                                 (langage, key) => (
-                                                    <p key={key}>{langage}</p>
+                                                    <p
+                                                        className="skills"
+                                                        key={key}
+                                                    >
+                                                        {langage}
+                                                    </p>
                                                 )
                                             )}
                                         </div>
-                                    </div>
+                                    </li>
                                 )
                             })}
-                        </div>
-                    </div>
+                        </ul>
+                    </section>
                 </div>
-                <hr />
+
                 <div className="wrapper-projects">
-                    <h2>Réalisations</h2>
+                    <h2>Quelques Réalisations</h2>
                     <div className="container-project">
                         {Projects.map((project) => {
                             return (
@@ -60,51 +73,42 @@ const Main = ({ offsetY }) => {
                                                     src={
                                                         project.screen
                                                             ? project.screen
-                                                            : wallpaper
+                                                            : "no screen"
                                                     }
                                                 />
                                             </figure>
                                         </div>
-
-                                        <div className="card-body">
-                                            <h3 className="title-project">
-                                                {project.title}
-                                            </h3>
-                                            <h4>{project.description} </h4>
-                                            <p>
-                                                {project.stacks.map(
-                                                    (stack, id) => {
-                                                        return (
-                                                            <strong key={id}>
-                                                                {stack}
-                                                            </strong>
-                                                        )
-                                                    }
-                                                )}
-                                            </p>
-                                            <span
-                                                onClick={() =>
-                                                    window.open(
-                                                        project.githubLink
-                                                    )
-                                                }
-                                            >
-                                                Code source
-                                                 <i className="fas fa-link" style={{marginLeft: '3px'}}/>
-                                            </span>
-                                            {project.link !== ""  ?
-                                                <button
-                                                    className="button"
-                                                    onClick={() =>
-                                                    window.open(project.link)
-                                                }
-                                                >
-                                                <i className="fa fa-chevron-right"></i>
-                                                Voir le projet
-                                            </button>
-                                            : <div>Projet en construction</div>
-                                        }
-                                            
+                                        <div className="slide">
+                                            <div className="card-body">
+                                                <h3 className="title-project">
+                                                    {project.title}
+                                                </h3>
+                                                <h4>{project.description} </h4>
+                                                <div className="btn-link">
+                                                    <span
+                                                        onClick={() =>
+                                                            window.open(
+                                                                project.githubLink
+                                                            )
+                                                        }
+                                                    >
+                                                        Code source
+                                                    </span>
+                                                    {project.link !== "" ? (
+                                                        <span
+                                                            onClick={() =>
+                                                                window.open(
+                                                                    project.link
+                                                                )
+                                                            }
+                                                        >
+                                                            Voir le projet
+                                                        </span>
+                                                    ) : (
+                                                        <div></div>
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -113,6 +117,13 @@ const Main = ({ offsetY }) => {
                     </div>
                 </div>
             </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#0099ff"
+                    fillOpacity="1"
+                    d="M0,64L1440,256L1440,320L0,320Z"
+                ></path>
+            </svg>
         </section>
     )
 }

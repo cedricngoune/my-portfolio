@@ -47,8 +47,8 @@ export const Projects = [{
         title: "Location de vélos",
         description: "Application permettant de trouver des vélos disponibles à proximité",
         screen: bikeImg,
-        link: "",
-        stacks: ["Python", "React", "MySQL"],
+        link: "https://bike-react.netlify.app/",
+        stacks: ["Redux/React", "MongoDB", "NodeJS"],
         githubLink: "",
     },
     {

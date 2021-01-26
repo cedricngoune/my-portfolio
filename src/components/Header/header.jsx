@@ -3,37 +3,35 @@ import Navbar from "../Navbar/nav"
 import "./header.scss"
 import avatar from "../../assets/images/avatar.png"
 
+
 const Header = () => {
     return (
         <>
             <Navbar />
-       
+         
                 <div className="container">
                     <div className="container-header">
                         <div className="container-fluid">
                             <div className="container-title">
                                 <h1 className="title">cédric Ngouné</h1>
-                                <h3 className="description">
-                                    Hello, Je suis{" "}
-                                    <span> développeur web </span>
+                                <p className="header_presentation">
+                                    Hello, Je suis
+                                    <strong>  développeur web  </strong>
                                     passionné des technologies de l'information
                                     et de la communication.
                                     <br />
                                     <br />
-                                    J'ai un fort penchant pour la
-                                    <strong> clean code </strong>
-                                    et les bonnes pratiques de développement.
-                                    <br />
-                                    Ce <span>portfolio </span> est l'occasion
-                                    pour moi de présenter mes connaissances et
-                                    mes réalisations.
-                                </h3>
+                                    J'ai un fort penchant pour le
+                                    <strong> clean code, TDD  </strong>  et tout ce 
+                                    qui tourne autour des  pratiques <strong>craft</strong>.
+                                </p>
                             </div>
                         </div>
                         <figure>
                             <img className="avatar" src={avatar} alt="avatar" />
                         </figure>
                     </div>
+                    
                 </div>
           
         </>
