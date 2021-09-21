@@ -1,35 +1,41 @@
 $primaryColor: #7187a7;
+$bgColor: #080826;
 $fontFamily: 'Montserrat';
 $fontFamilySecond: 'Avenir';
 $josefinSans: "Josefin Sans";
+
+
+
 .container {
     margin: 0;
-    height: 40vw;
+    height: 50vw;
     position: relative;
+    background-color: $bgColor;
     .container-header {
         display: grid;
-        grid-template-columns: 40% 30%;
+        grid-template-columns: 43% 30%;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 100px;
+        height: 55vh;
+        font-family: 'Montserrat', serif;
+        z-index: 100;
         .container-title {
             display: flex;
             flex-flow: column wrap;
         }
         .title {
-            font-size: 5.5em;
-            font-family: 'Josefin Sans', sans-serif;
+            font-size: 4em;
             text-transform: capitalize;
             font-weight: 900;
-            padding: 2vw 0;
+            margin: 20px 0;
+            color: #fff;
         }
-        .header_presentation {
-            font-family: "Montserrat";
-            font-weight: 300;
-            text-align: left;
-            line-height: 1.7;
-            font-size: 1.3em;
+        .job-title {
+            font-family: $fontFamilySecond;
+            color: #fff;
+            font-size: 2em;
+
         }
         figure {
             display: flex;
@@ -40,5 +46,16 @@ $josefinSans: "Josefin Sans";
                 border-radius: 50%;
             }
         }
+    }
+    .list-group-network {
+        padding-top: 2rem;
+        .rounded-icon {
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: black;
+            padding: 5px 5px;
+            color: white;
+        }
+
     }
 }

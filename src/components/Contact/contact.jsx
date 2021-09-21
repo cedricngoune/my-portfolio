@@ -1,8 +1,31 @@
 import React from "react"
 import "./contact.scss"
+import {useState} from "react";
+
+
 
 const FormContact = () => {
-    const sendMail = () => {}
+
+    const [values, setValues] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const set = data => {
+        return ({target: { value}}) => {
+            setValues(oldValues => ({...oldValues, [data]: value}))
+        }
+    }
+    const sendMail = e => {
+        e.preventDefault()
+
+        setValues({
+            name: '',
+            email: '',
+            message: ''
+        })
+    }
     return (
         <div className="section-contact">
             <div className="wrapper-contact">
@@ -14,12 +37,16 @@ const FormContact = () => {
                                 <input
                                     type="text"
                                     name="name"
+                                    value={values.name}
                                     className="input-name"
+                                    onChange={set('name')}
                                     placeholder="Votre nom"
                                 />
                                 <input
                                     type="email"
                                     name="email"
+                                    value={values.email}
+                                    onChange={set('email')}
                                     className="input-email"
                                     placeholder="votre email"
                                 />
@@ -29,11 +56,13 @@ const FormContact = () => {
                         <textarea
                             rows="5"
                             name="message"
+                            value={values.message}
+                            onChange={set('message')}
                             className="input-textarea"
                             placeholder="Votre message :)"
                         />
 
-                        <button className="btn-send" onClick={() => sendMail}>
+                        <button className="btn-send" onClick={sendMail}>
                             Envoyer
                         </button>
                     </div>

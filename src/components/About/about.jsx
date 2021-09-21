@@ -2,14 +2,14 @@
 import React from "react"
 import "./about.scss"
 import picture from "../../assets/images/pp.jpeg"
-// import Timeline from './Timeline/timeline'
+
 
 const About = () => {
     return (
         <>
             <div className="section">
                 <div className="wrapper-section">
-                    <h1 className="section-title"> Qui suis-je ? </h1>
+                    <h1 className="title-hero"> Qui suis-je ? </h1>
                     <div className="section-content">
                         <div className="about_me">
                             <p>
@@ -17,7 +17,7 @@ const About = () => {
                                 l'informatique cela fait quelques années. Je me
                                 suis intéressé depuis peu aux bonnes pratiques
                                 que j'ai découvert à travers en écoutant des
-                                poadcast, en assistant aux conférences et grace
+                                podcast, en assistant aux conférences et grace
                                 au livre de
                                 <strong> Robert C.Martin </strong>.
                             </p>

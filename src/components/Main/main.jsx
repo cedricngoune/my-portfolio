@@ -1,66 +1,44 @@
 import React from "react"
-import { Stacks } from "./stacks"
 import { Projects } from "./projects"
-
 import "./main.scss"
+import {languages} from "./languages";
+
+
 
 const Main = () => {
     return (
         <section className="section">
             <div className="wrapper">
-                <div className="container-hero">
-                    <div className="container-fluid">
-                        <div className="hero ">
-                            <h1 className="title-hero">
-                                Projets & Compétences
-                            </h1>
+                <div className="container-fluid ">
+                    <h1 className="title-hero">compétences</h1>
+                    <div className="wrapper-skills">
+                        <p className="text-skill">Ma boîte à outils de développeur web </p>
+                        <div className="content-skills">
+                            <div className="content-illustration">
+                                <img className="illustration-img" src="https://static.wixstatic.com/media/07893b_a9bbe4b5116647259e1c41b2100f1443~mv2.gif" alt="illustration" />
+                            </div>
+                            <div className="content-languages-slider">
+                                {languages.map((language, index) => (
+                                    <img key={index} src={language.image} className="item-img" title={language.title} alt={language.title}/>
+
+                                ))}
+                            </div>
+                        </div>
+                        <div className="content-soft-skills">
+                            <p className="text-soft-skill">Compétences annexes</p>
+                            <div className="content-element">
+                                <span className="circle"/> <p className="skill-item">Résolution de problème</p>
+                                <span className="circle"/> <p className="skill-item">Travail d'équipe</p>
+                                <span className="circle"/> <p className="skill-item">Prise d'initiative</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="skills-hero">
-                    <h2>Mes compétences à votre disposition </h2>
-                    <section className="wrapper-skills">
-                        <ul className="caroussel">
-                            {Stacks.map((stack, index) => {
-                                return (
-                                    <li key={index} className="card box">
-                                        <div className="box-header">
-                                            <div className={stack.class}>
-                                                <span>
-                                                    <img
-                                                        src={stack.icon}
-                                                        alt="icon-dev"
-                                                    />
-                                                </span>
-                                                <h3>{stack.title} </h3>
-                                            </div>
-                                        </div>
-                                        <div className="box-content">
-                                            <p className="text_description">
-                                                {stack.description}
-                                            </p>
-                                            <h5>Stacks utilisés:</h5>
-                                            {stack.langages.map(
-                                                (langage, key) => (
-                                                    <p
-                                                        className="skills"
-                                                        key={key}
-                                                    >
-                                                        {langage}
-                                                    </p>
-                                                )
-                                            )}
-                                        </div>
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </section>
-                </div>
-
                 <div className="wrapper-projects">
-                    <h2>Quelques Réalisations</h2>
+                    <h1 className="title-hero">
+                        RÉALISATIONS
+                    </h1>
                     <div className="container-project">
                         {Projects.map((project) => {
                             return (
@@ -105,7 +83,7 @@ const Main = () => {
                                                             Voir le projet
                                                         </span>
                                                     ) : (
-                                                        <div></div>
+                                                        <div/>
                                                     )}
                                                 </div>
                                             </div>
@@ -117,13 +95,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path
-                    fill="#0099ff"
-                    fillOpacity="1"
-                    d="M0,64L1440,256L1440,320L0,320Z"
-                ></path>
-            </svg>
+
         </section>
     )
 }

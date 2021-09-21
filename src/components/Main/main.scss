@@ -3,19 +3,7 @@ $title: 'Major Mono Display';
 $subtitle: 'Avenir';
 $montserrat: "Montserrat";
 $poppins: "Poppins";
-::-webkit-scrollbar-track {
-    background-color: #F5F5F5;
-}
 
-*::-webkit-scrollbar {
-    background-color: #F5F5F5;
-    height: 6px;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #3d4852;
-    border-radius: 3px;
-}
 
 * {
     -ms-overflow-style: none;
@@ -25,89 +13,109 @@ $poppins: "Poppins";
     position: relative;
     width: 100%;
     .wrapper {
-        padding: 0 250px;
+        padding: 0 150px;
         background-color: transparent;
+
     }
-    .container-hero {
-        padding: 2.5vw 0;
-        .title-hero {
-            font-family: $title;
-            font-weight: 800;
-            font-size: 3.4rem;
-            position: relative;
-            word-spacing: -10px;
+    .wrapper-skills {
+        height: 100vh;
+        .content-skills {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-top: 10vh;
         }
+        .content-languages-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            margin: 7rem 0;
+            
+        }
+        @keyframes translates {
+            0% { transform: translateX(100%)}
+            100% {transform: translateX(-750%)}
+        }
+        .item-img{
+            padding: 10px;
+            background-color: #fefefe;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            margin-right: 10px;
+            animation: translates 15s linear infinite;
+            &:hover {
+
+            }
+        }
+        .text-skill {
+            font-family: $montserrat;
+            font-size: 25px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 3vh;
+        }
+        .content-soft-skills {
+            margin-top: 15vh;
+            .content-element{
+                position: relative;
+                align-items: center;
+                margin-left: 20vw;
+            }
+            .text-soft-skill {
+                font-family: $montserrat;
+                font-size: 25px;
+                font-weight: 400;
+                padding-left: 5vw;
+            }
+            .skill-item{
+                list-style: none;
+                font-size: 20px;
+                font-family: $montserrat;
+                padding: 0 25px;
+            }
+            .circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: #3564aa;
+            }
+        }
+
+        .illustration-img {
+            width: 450px;
+            height: auto;
+        }
+
+    }
+
+    .title-hero {
+        font-family: $montserrat;
+        color: #e1e1e1;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 5.4rem;
+        text-align: center;
     }
     .skills-hero {
         position: relative;
         width: 100%;
         h2 {
-            font-family: 'Avenir Next';
-            font-weight: 400;
-            font-size: 2rem;
+            font-family: $montserrat;
+            font-weight: 700;
+            font-size: 1.9rem;
+            text-align: center;
         }
-        .caroussel {
-            display: flex;
-            overflow-x: scroll;
-            list-style-type: none;
-            scroll-snap-type: x mandatory;
-            margin: 7rem 0;
-            .box {
-                background-color: #fff;
-                margin-top: 2vw;
-                box-sizing: border-box;
-                height: 20rem;
-                flex: 1 0 400px;
-                scroll-snap-align: start;
-                border: 1px solid rgba(157, 157, 167, 0.15);
-                border-radius: 5px 0 0 5px;
-                .text-skill {
-                    text-align: center;
-                    span {
-                        display: block;
-                        margin: 0 auto;
-                        line-height: 3;
-                        color: #3564aa;
-                        width: 70px;
-                        height: auto;
-                    }
-                    h3 {
-                        font-size: 1.2rem;
-                        font-family: $poppins;
-                        color: $primaryColor;
-                    }
-                }
-                .box-header {
-                    padding-top: 2.3rem;
-                }
-                .box-content {
-                    text-align: center;
-                    .text_description {
-                        padding: 2rem 1rem;
-                        font-weight: 300;
-                        line-height: 2;
-                    }
-                    h5 {
-                        font-size: 17px;
-                        padding-bottom: 1rem;
-                    }
-                    .skills {
-                        display: inline;
-                        padding-left: 10px;
-                        font-size: 17px;
-                        font-weight: 300;
-                        font-family: $subtitle;
-                    }
-                }
-            }
-        }
+
     }
     h2 {
         font-family: $montserrat;
         font-size: 1.5em;
     }
+
+    /**
+    PROJETS & RÉALISATIONS
+     */
     .wrapper-projects {
-        padding: 1vw 0;
+        margin: 5vh 0;
         .container-project {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -116,6 +124,7 @@ $poppins: "Poppins";
                 margin-top: 3vw;
                 margin-right: 3vw;
                 transition: all 70ms ease-in-out;
+                border-radius: 5px;
                 &:hover {
                     .slide {
                         transform: translateY(0);
@@ -131,7 +140,7 @@ $poppins: "Poppins";
                     width: 100%;
                     object-fit: cover;
                     height: 222px;
-                    filter: brightness(80%);
+
                     transform: scale(1.2);
                     transition: all 200ms ease-in-out;
                     &:hover {

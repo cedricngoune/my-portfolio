@@ -2,7 +2,7 @@ import uuid from "react-uuid"
 import imgProject_one from "../../assets/images/screenOne.png"
 import imgProject_two from "../../assets/images/screenTwo.png"
 import imgProject_three from "../../assets/images/imgProject_three.png"
-import Pwd from "../../assets/images/pwd.jpg"
+import Pwd from "../../assets/images/password-keychain.jpeg"
 import bikeImg from "../../assets/images/bike_rental.png"
 import carParkImg from "../../assets/images/car_park.png"
 

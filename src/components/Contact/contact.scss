@@ -1,7 +1,8 @@
+$montserrat: 'Montserrat', serif;
 .wrapper-contact {
     padding: 0 250px;
     .section-title {
-        font-family: 'Raleway Dots';
+        font-family: $montserrat;
         font-size: 3.4rem;
     }
     .form-contact {
@@ -19,7 +20,7 @@
         border: none;
         margin-right: 25px;
         font-size: 18px;
-        font-family: 'Raleway Dots';
+        font-family: $montserrat;
         font-weight: 800;
         &::placeholder {
             font-family: inherit;
@@ -37,7 +38,7 @@
         margin-right: 25px;
         margin-top: 60px;
         font-size: 18px;
-        font-family: 'Raleway Dots';
+        font-family: $montserrat;
         font-weight: 800;
     }
     .btn-send {
@@ -46,7 +47,7 @@
         position: relative;
         padding: 15px 13.5px;
         background-color: transparent;
-        font-family: 'Montserrat';
+        font-family: $montserrat;
         outline: none;
         border: 1px solid black;
         font-size: 16px;

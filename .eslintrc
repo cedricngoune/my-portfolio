@@ -2,14 +2,14 @@
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
-    "allowImportExportEverywhere": false,
+    "allowImportExportEverywhere": true,
     "codeFrame": false
   },
   "extends": ["react-app", "prettier"],
   "plugins": ["react", "prettier"],
   "env": { "browser": true, "jest": true },
   "rules": {
-    "max-len": ["error", { "code": 110 }],
+    "max-len": ["error", { "code": 300 }],
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
     "react/jsx-closing-bracket-location": [1, "tag-aligned"],

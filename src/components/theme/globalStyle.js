@@ -8,7 +8,7 @@ export default createGlobalStyle `
     h1, h2, .header_presentation, .about_me {
         color: ${(props) => props.theme.fontColor};
     }
-    strong {
+    .header_presentation .underlined {
         background-color: ${(props) => props.theme.strongColor};
         color: ${(props) => props.theme.fontColor};
     }

@@ -9,8 +9,13 @@ $avenir: 'Avenir';
     .wrapper-section {
         margin: 15rem 250px;
         h1 {
-            font-size: 3.2rem;
-            font-family: $title;
+            font-family: $montserrat;
+            color: #e1e1e1;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 5.4rem;
+            position: relative;
+            text-align: center;
         }
         .section-content {
             display: flex;
